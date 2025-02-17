@@ -4,11 +4,11 @@ import { ChatWindow } from './components/ChatWindow';
 import { TopMenu } from './components/TopMenu';
 import { BottomMenu } from './components/BottomMenu';
 import { ChevronRight, MessageSquare } from 'lucide-react';
-import { Dashboard } from './pages/Dashboard';
-import { Projects } from './pages/Projects';
-import { Resources } from './pages/Resources';
-import { Settings } from './pages/Settings';
-import { Support } from './pages/Support';
+import { DASHBOARD } from './pages/DASHBOARD';
+import { PROJECTS } from './pages/PROJECTS';
+import { RESOURCES } from './pages/RESOURCES';
+import { SETTINGS } from './pages/SETTINGS';
+import { SUPPORT } from './pages/SUPPORT';
 
 interface NavLinkProps {
   to: string;
@@ -44,11 +44,11 @@ function AppContent() {
 
   const menuItems = [
     { to: '/', label: 'Chat', icon: <MessageSquare className="w-5 h-5" />, primary: true },
-    { to: '/dashboard', label: 'Dashboard' },
-    { to: '/projects', label: 'Projects' },
-    { to: '/resources', label: 'Resources' },
-    { to: '/settings', label: 'Settings' },
-    { to: '/support', label: 'Support' }
+    { to: '/dashboard', label: 'DASHBOARD' },
+    { to: '/projects', label: 'PROJECTS' },
+    { to: '/resources', label: 'RESOURCES' },
+    { to: '/settings', label: 'SETTINGS' },
+    { to: '/support', label: 'SUPPORT' }
   ];
 
   return (
@@ -65,11 +65,11 @@ function AppContent() {
         <div className="max-w-4xl mx-auto px-3 h-full">
           <Routes>
             <Route path="/" element={<ChatWindow />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/support" element={<Support />} />
+            <Route path="/dashboard" element={<DASHBOARD />} />
+            <Route path="/projects" element={<PROJECTS />} />
+            <Route path="/resources" element={<RESOURCES />} />
+            <Route path="/settings" element={<SETTINGS />} />
+            <Route path="/support" element={<SUPPORT />} />
           </Routes>
         </div>
       </div>

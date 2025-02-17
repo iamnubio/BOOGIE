@@ -1,33 +1,36 @@
-export function Dashboard() {
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+export function DASHBOARD() {
   const [news, setNews] = useState([]);
-  const [statistics, setStatistics] = useState([]);
-  const apiKey = 'YOUR_API_KEY'; // Replace with your News API key
+  const [aiStatistics, setAiStatistics] = useState([]);
+  const apiKey = 'YOUR_GUARDIAN_API_KEY'; // Replace with your Guardian API key
 
   useEffect(() => {
     const fetchNews = async () => {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=cnn&apiKey=59129091305a4ee3b94267159aa5b9f0`
+          `https://content.guardianapis.com/search?q=cnn&api-key=62fe3280-d3a0-4c54-bbe4-21df7ada6db9`
         );
-        setNews(response.data.articles);
+        setNews(response.data.response.results);
       } catch (error) {
         console.error('Error fetching news:', error);
       }
     };
 
-    const fetchStatistics = async () => {
+    const fetchAiStatistics = async () => {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=artificial+intelligence+usage&apiKey=59129091305a4ee3b94267159aa5b9f0`
+          `https://content.guardianapis.com/search?q=artificial+intelligence&api-key=62fe3280-d3a0-4c54-bbe4-21df7ada6db9`
         );
-        setStatistics(response.data.articles);
+        setAiStatistics(response.data.response.results);
       } catch (error) {
-        console.error('Error fetching statistics:', error);
+        console.error('Error fetching AI statistics:', error);
       }
     };
 
     fetchNews();
-    fetchStatistics();
+    fetchAiStatistics();
   }, [apiKey]);
 
   return (
@@ -41,10 +44,9 @@ export function Dashboard() {
           {news.length > 0 ? (
             news.map((item, index) => (
               <div key={index} className="mb-2">
-                <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:underline">
-                  {item.title}
+                <a href={item.webUrl} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:underline">
+                  {item.webTitle}
                 </a>
-                <p className="text-gray-400 text-sm">{item.description}</p>
               </div>
             ))
           ) : (
@@ -53,17 +55,16 @@ export function Dashboard() {
         </div>
         <div className="bg-gray-900/50 rounded-lg p-4 border border-teal-900/30">
           <h2 className="text-xl font-semibold mb-3 text-teal-300">Statistics</h2>
-          {statistics.length > 0 ? (
-            statistics.map((item, index) => (
+          {aiStatistics.length > 0 ? (
+            aiStatistics.map((item, index) => (
               <div key={index} className="mb-2">
-                <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:underline">
-                  {item.title}
+                <a href={item.webUrl} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:underline">
+                  {item.webTitle}
                 </a>
-                <p className="text-gray-400 text-sm">{item.description}</p>
               </div>
             ))
           ) : (
-            <p className="text-gray-400">No statistics available</p>
+            <p className="text-gray-400">No AI statistics available</p>
           )}
         </div>
       </div>
