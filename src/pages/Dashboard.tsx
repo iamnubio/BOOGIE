@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
 export function Dashboard() {
   const [news, setNews] = useState([]);
   const [statistics, setStatistics] = useState([]);
