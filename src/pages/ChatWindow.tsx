@@ -21,7 +21,7 @@ function ThinkingIndicator() {
       <div className="max-w-[80%] rounded-2xl px-4 py-2 bg-gray-900 rounded-tl-sm">
         <div className="flex items-center gap-2 mb-1">
           <Bot className="w-4 h-4" />
-          <span className="text-sm font-medium text-gray-100">BOOGIE-Ai</span>
+          <span className="text-sm font-medium text-gray-100">teal-Ai</span>
         </div>
         <div className="flex items-center gap-2 text-gray-400">
           <span>Thinking</span>
@@ -61,7 +61,7 @@ export function ChatWindow() {
         } catch (error) {
           console.error('Error initializing chat:', error);
           setMessages([{
-            content: "Hello! I'm BOOGIE AI. How can I help you today?",
+            content: "Hello! I'm teal AI. How can I help you today?",
             isBot: true,
           }]);
         } finally {
@@ -121,7 +121,7 @@ export function ChatWindow() {
               {message.isBot && (
                 <div className="flex items-center gap-2 mb-1">
                   <Bot className="w-4 h-4" />
-                  <span className="text-sm font-medium text-gray-100">BOOGIE-Ai</span>
+                  <span className="text-sm font-medium text-teal-300">teal-Ai</span>
                 </div>
               )}
               <p className="text-gray-100 whitespace-pre-line">{message.content}</p>
