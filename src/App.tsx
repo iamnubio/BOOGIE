@@ -7,7 +7,7 @@ import { ChevronRight, MessageSquare } from 'lucide-react';
 import { DASHBOARD } from './pages/Dashboard';
 import { PROJECTS } from './pages/Projects';
 import { RESOURCES } from './pages/Resources';
-import { SETTINGS } from './pages/Settings';
+import { QUESTHUB } from './pages/Questhub';
 import { SUPPORT } from './pages/Support';
 
 interface NavLinkProps {
@@ -47,7 +47,7 @@ function AppContent() {
     { to: '/dashboard', label: 'DASHBOARD' },
     { to: '/projects', label: 'PROJECTS' },
     { to: '/resources', label: 'RESOURCES' },
-    { to: '/settings', label: 'SETTINGS' },
+    { to: '/QUESTHUB', label: 'QUESTHUB' },
     { to: '/support', label: 'SUPPORT' }
   ];
 
@@ -68,7 +68,7 @@ function AppContent() {
             <Route path="/dashboard" element={<DASHBOARD />} />
             <Route path="/projects" element={<PROJECTS />} />
             <Route path="/resources" element={<RESOURCES />} />
-            <Route path="/settings" element={<SETTINGS />} />
+            <Route path="/QUESTHUB" element={<QUESTHUB />} />
             <Route path="/support" element={<SUPPORT />} />
           </Routes>
         </div>
