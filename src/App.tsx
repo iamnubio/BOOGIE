@@ -52,9 +52,9 @@ function AppContent() {
   ];
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-b from-gray-950 via-teal-950 to-gray-950 text-gray-100">
+    <div className="flex flex-col h-screen bg-gradient-to-b from-gray-950 via-pink-950 to-gray-950 text-gray-100">
       {/* Top Menu */}
-      <div className="bg-gray-950/90 backdrop-blur-md border-b border-teal-900/50">
+      <div className="bg-gray-950/90 backdrop-blur-md border-b border-pink-900/50">
         <div className="max-w-4xl mx-auto px-3 py-2">
           <TopMenu isOpen={isMenuOpen} onToggle={() => setIsMenuOpen(!isMenuOpen)} />
         </div>
@@ -78,7 +78,7 @@ function AppContent() {
       <div
         className={`fixed inset-y-0 right-0 w-64 bg-gray-950/95 backdrop-blur-md transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } border-l border-teal-900/50 p-6 z-50`}
+        } border-l border-pink-900/50 p-6 z-50`}
       >
         {/* Close Button */}
         <button
@@ -95,7 +95,7 @@ function AppContent() {
               <NavLink
                 key={item.to}
                 to={item.to}
-                className="flex items-center gap-2 px-4 py-2 bg-teal-900/30 rounded-lg border border-teal-800/50 text-white hover:bg-teal-800/40 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-pink-900/30 rounded-lg border border-pink-800/50 text-white hover:bg-pink-800/40 transition-colors"
                 icon={item.icon}
               >
                 {item.label}
