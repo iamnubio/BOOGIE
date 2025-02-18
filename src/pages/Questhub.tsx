@@ -9,11 +9,11 @@ export function QUESTHUB() {
       <div className="space-y-6">
         <div className="bg-gray-900/50 rounded-lg p-4 border border-pink-900/30">
           <h2 className="text-xl font-semibold mb-3 text-pink-300">Active Quests</h2>
-          <p className="text-gray-400">No QUESTHUB available</p>
+          <p className="text-gray-400">Bounties coming soon</p>
         </div>
         <div className="bg-gray-900/50 rounded-lg p-4 border border-pink-900/30">
           <h2 className="text-xl font-semibold mb-3 text-pink-300">Leaderboard</h2>
-          <p className="text-gray-400">No Leaderboard available</p>
+          <p className="text-gray-400">Leaderboard coming soon</p>
         </div>
       </div>
     </div>
