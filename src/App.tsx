@@ -4,11 +4,11 @@ import { ChatWindow } from './components/ChatWindow';
 import { TopMenu } from './components/TopMenu';
 import { BottomMenu } from './components/BottomMenu';
 import { ChevronRight, MessageSquare } from 'lucide-react';
-import { DASHBOARD } from './pages/DASHBOARD';
-import { PROJECTS } from './pages/PROJECTS';
-import { RESOURCES } from './pages/RESOURCES';
-import { SETTINGS } from './pages/SETTINGS';
-import { SUPPORT } from './pages/SUPPORT';
+import { DASHBOARD } from './pages/Dashboard';
+import { PROJECTS } from './pages/Projects';
+import { RESOURCES } from './pages/Resources';
+import { SETTINGS } from './pages/Settings';
+import { SUPPORT } from './pages/Support';
 
 interface NavLinkProps {
   to: string;
