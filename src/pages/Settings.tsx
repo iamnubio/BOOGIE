@@ -8,11 +8,11 @@ export function SETTINGS() {
       </h1>
       <div className="space-y-6">
         <div className="bg-gray-900/50 rounded-lg p-4 border border-teal-900/30">
-          <h2 className="text-xl font-semibold mb-3 text-teal-300">General SETTINGS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-teal-300">General Settings</h2>
           <p className="text-gray-400">No settings available</p>
         </div>
         <div className="bg-gray-900/50 rounded-lg p-4 border border-teal-900/30">
-          <h2 className="text-xl font-semibold mb-3 text-teal-300">Account SETTINGS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-teal-300">Account Settings</h2>
           <p className="text-gray-400">No account settings available</p>
         </div>
       </div>

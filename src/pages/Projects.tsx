@@ -9,7 +9,7 @@ export function PROJECTS() {
       <div className="grid grid-cols-1 gap-4">
         <div className="bg-gray-900/50 rounded-lg p-4 border border-teal-900/30">
           <h2 className="text-xl font-semibold mb-2 text-teal-300">Project List</h2>
-          <p className="text-gray-400">No projects created yet</p>
+          <p className="text-gray-400">GO MOTO Animation Series</p>
         </div>
       </div>
     </div>
