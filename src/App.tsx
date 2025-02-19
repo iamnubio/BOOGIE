@@ -5,7 +5,7 @@ import { TopMenu } from './components/TopMenu';
 import { BottomMenu } from './components/BottomMenu';
 import { ChevronRight, MessageSquare } from 'lucide-react';
 import { DASHBOARD } from './pages/Dashboard';
-import { PROJECTS } from './pages/Projects';
+import { SERIES } from './pages/Series';
 import { RESOURCES } from './pages/Resources';
 import { QUESTHUB } from './pages/Questhub';
 import { SUPPORT } from './pages/Support';
@@ -45,7 +45,7 @@ function AppContent() {
   const menuItems = [
     { to: '/', label: 'Chat', icon: <MessageSquare className="w-5 h-5" />, primary: true },
     { to: '/dashboard', label: 'DASHBOARD' },
-    { to: '/projects', label: 'PROJECTS' },
+    { to: '/series', label: 'SERIES' },
     { to: '/resources', label: 'RESOURCES' },
     { to: '/QUESTHUB', label: 'QUESTHUB' },
     { to: '/support', label: 'SUPPORT' }
@@ -66,7 +66,7 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<ChatWindow />} />
             <Route path="/dashboard" element={<DASHBOARD />} />
-            <Route path="/projects" element={<PROJECTS />} />
+            <Route path="/series" element={<SERIES />} />
             <Route path="/resources" element={<RESOURCES />} />
             <Route path="/QUESTHUB" element={<QUESTHUB />} />
             <Route path="/support" element={<SUPPORT />} />
