@@ -8,12 +8,12 @@ export function QUESTHUB() {
       </h1>
       <div className="space-y-6">
         <div className="bg-gray-900/50 rounded-lg p-4 border border-pink-900/30">
-          <h2 className="text-xl font-semibold mb-3 text-pink-300">General Settings</h2>
-          <p className="text-gray-400">No settings available</p>
+          <h2 className="text-xl font-semibold mb-3 text-pink-300">Active Quests</h2>
+          <p className="text-gray-400">Bounties coming soon</p>
         </div>
         <div className="bg-gray-900/50 rounded-lg p-4 border border-pink-900/30">
-          <h2 className="text-xl font-semibold mb-3 text-pink-300">Account Settings</h2>
-          <p className="text-gray-400">No account settings available</p>
+          <h2 className="text-xl font-semibold mb-3 text-pink-300">Leaderboard</h2>
+          <p className="text-gray-400">Coming soon</p>
         </div>
       </div>
     </div>
