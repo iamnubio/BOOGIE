@@ -3,7 +3,9 @@ import axios from 'axios';
 
 export function DASHBOARD() {
   const [animeNews, setAnimeNews] = useState([]);
-  const [statistics, setStatistics] = useState([]);
+  const [trendingGames, setTrendingGames] = useState([]);
+
+  const RAWG_API_KEY = '4ca6729320db4850ac034d14bdbffafd'; // Replace with your actual API key
 
   useEffect(() => {
     // Fetch Top Anime Rankings from Jikan API
@@ -13,12 +15,12 @@ export function DASHBOARD() {
       })
       .catch(error => console.error('Error fetching anime rankings:', error));
 
-    // Fetch Statistics from Kitsu API
-    axios.get('https://kitsu.io/api/edge/anime')
+    // Fetch Currently Trending Games from RAWG API
+    axios.get(`https://api.rawg.io/api/games?ordering=-added&page_size=5&key=${RAWG_API_KEY}`)
       .then(response => {
-        setStatistics(response.data.data.slice(0, 5)); // Top 5 Statistics Data
+        setTrendingGames(response.data.results); // Top 5 Most Popular Games Recently
       })
-      .catch(error => console.error('Error fetching statistics:', error));
+      .catch(error => console.error('Error fetching trending games:', error));
   }, []);
 
   return (
@@ -43,23 +45,25 @@ export function DASHBOARD() {
         </div>
 
         <div className="bg-gray-900/50 rounded-lg p-4 border border-pink-900/30">
-          <h2 className="text-xl font-semibold mb-3 text-pink-300">Cult Favourites</h2>
-          {statistics.length > 0 ? (
-            statistics.map((stat, index) => (
+          <h2 className="text-xl font-semibold mb-3 text-pink-300">Currently Trending Games</h2>
+          {trendingGames.length > 0 ? (
+            trendingGames.map((game, index) => (
               <div key={index} className="mb-2">
-                <a href={`https://kitsu.io/anime/${stat.id}`} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:underline">
-                  {stat.attributes.canonicalTitle}
+                <a href={game.website || '#'} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:underline">
+                  {game.name} (Rating: {game.rating || 'N/A'})
                 </a>
               </div>
             ))
           ) : (
-            <p className="text-gray-400">No statistics available</p>
+            <p className="text-gray-400">No trending games available</p>
           )}
         </div>
       </div>
     </div>
   );
 }
+
+
 
 
 
