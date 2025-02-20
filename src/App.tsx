@@ -68,7 +68,7 @@ function AppContent() {
             <Route path="/dashboard" element={<DASHBOARD />} />
             <Route path="/series" element={<SERIES />} />
             <Route path="/resources" element={<RESOURCES />} />
-            <Route path="/Qesthub" element={<QUESTHUB />} />
+            <Route path="/Questhub" element={<QUESTHUB />} />
             <Route path="/support" element={<SUPPORT />} />
           </Routes>
         </div>
