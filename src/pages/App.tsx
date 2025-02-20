@@ -5,9 +5,9 @@ import { TopMenu } from './components/TopMenu';
 import { BottomMenu } from './components/BottomMenu';
 import { ChevronRight, MessageSquare } from 'lucide-react';
 import { DASHBOARD } from './pages/Dashboard';
-import { SERIES } from './pages/Series';
+import { PROJECTS } from './pages/Projects';
 import { RESOURCES } from './pages/Resources';
-import { QUESTHUB } from './pages/Questhub';
+import { info@motosimba.com } from './pages/info@motosimba.com';
 import { SUPPORT } from './pages/Support';
 
 interface NavLinkProps {
@@ -45,9 +45,9 @@ function AppContent() {
   const menuItems = [
     { to: '/', label: 'Chat', icon: <MessageSquare className="w-5 h-5" />, primary: true },
     { to: '/dashboard', label: 'DASHBOARD' },
-    { to: '/series', label: 'SERIES' },
+    { to: '/projects', label: 'PROJECTS' },
     { to: '/resources', label: 'RESOURCES' },
-    { to: '/questhub', label: 'QUESTHUB' },
+    { to: '/info@motosimba.com', label: 'info@motosimba.com' },
     { to: '/support', label: 'SUPPORT' }
   ];
 
@@ -66,9 +66,9 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<ChatWindow />} />
             <Route path="/dashboard" element={<DASHBOARD />} />
-            <Route path="/series" element={<SERIES />} />
+            <Route path="/projects" element={<PROJECTS />} />
             <Route path="/resources" element={<RESOURCES />} />
-            <Route path="/Qesthub" element={<QUESTHUB />} />
+            <Route path="/info@motosimba.com" element={<info@motosimba.com />} />
             <Route path="/support" element={<SUPPORT />} />
           </Routes>
         </div>
