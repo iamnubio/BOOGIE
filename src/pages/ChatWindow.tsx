@@ -21,7 +21,7 @@ function ThinkingIndicator() {
       <div className="max-w-[80%] rounded-2xl px-4 py-2 bg-gray-900 rounded-tl-sm">
         <div className="flex items-center gap-2 mb-1">
           <Bot className="w-4 h-4" />
-          <span className="text-sm font-medium text-gray-100">teal-Ai</span>
+          <span className="text-sm font-medium text-gray-100">pink-Ai</span>
         </div>
         <div className="flex items-center gap-2 text-gray-400">
           <span>Thinking</span>
@@ -61,7 +61,7 @@ export function ChatWindow() {
         } catch (error) {
           console.error('Error initializing chat:', error);
           setMessages([{
-            content: "Hello! I'm teal AI. How can I help you today?",
+            content: "Hello! I'm pink AI. How can I help you today?",
             isBot: true,
           }]);
         } finally {
@@ -101,9 +101,9 @@ export function ChatWindow() {
   };
 
   return (
-    <div className="h-full flex flex-col bg-gray-950/50 rounded-lg backdrop-blur-sm border border-teal-900/50 shadow-xl relative">
-      <div className="absolute -inset-[1px] bg-gradient-to-r from-teal-900/20 via-teal-800/20 to-teal-900/20 rounded-lg blur-sm -z-10"></div>
-      <div className="absolute -inset-[1px] bg-gradient-to-r from-teal-800/10 via-teal-700/10 to-teal-800/10 rounded-lg blur-md -z-20"></div>
+    <div className="h-full flex flex-col bg-gray-950/50 rounded-lg backdrop-blur-sm border border-pink-900/50 shadow-xl relative">
+      <div className="absolute -inset-[1px] bg-gradient-to-r from-pink-900/20 via-pink-800/20 to-pink-900/20 rounded-lg blur-sm -z-10"></div>
+      <div className="absolute -inset-[1px] bg-gradient-to-r from-pink-800/10 via-pink-700/10 to-pink-800/10 rounded-lg blur-md -z-20"></div>
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message, index) => (
@@ -115,13 +115,13 @@ export function ChatWindow() {
               className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                 message.isBot
                   ? 'bg-gray-900 rounded-tl-sm'
-                  : 'bg-teal-900 rounded-tr-sm'
+                  : 'bg-pink-900 rounded-tr-sm'
               }`}
             >
               {message.isBot && (
                 <div className="flex items-center gap-2 mb-1">
                   <Bot className="w-4 h-4" />
-                  <span className="text-sm font-medium text-teal-300">teal-Ai</span>
+                  <span className="text-sm font-medium text-pink-300">pink-Ai</span>
                 </div>
               )}
               <p className="text-gray-100 whitespace-pre-line">{message.content}</p>
@@ -134,7 +134,7 @@ export function ChatWindow() {
 
       <form
         onSubmit={handleSubmit}
-        className="border-t border-teal-900/50 p-4 bg-gray-950/30"
+        className="border-t border-pink-900/50 p-4 bg-gray-950/30"
       >
         <div className="flex gap-4">
           <input
@@ -142,15 +142,15 @@ export function ChatWindow() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask about AI, machine learning, or data science..."
-            className="flex-1 bg-gray-900 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500 border border-teal-900"
+            className="flex-1 bg-gray-900 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 border border-pink-900"
             disabled={isLoading}
           />
           <button
             type="submit"
-            className={`bg-teal-900 text-white rounded-lg px-4 py-2 transition-colors duration-200 flex items-center gap-2 ${
+            className={`bg-pink-900 text-white rounded-lg px-4 py-2 transition-colors duration-200 flex items-center gap-2 ${
               isLoading 
                 ? 'opacity-50 cursor-not-allowed'
-                : 'hover:bg-teal-800'
+                : 'hover:bg-pink-800'
             }`}
             disabled={isLoading}
           >

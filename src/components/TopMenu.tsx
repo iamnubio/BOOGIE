@@ -10,9 +10,9 @@ export function TopMenu({ isOpen, onToggle }: TopMenuProps) {
   return (
     <div className="flex justify-between items-center">
       <div className="flex items-center gap-2">
-        <Bot className="w-6 h-6 sm:w-8 sm:h-8 text-teal-400" />
-        <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 bg-clip-text text-transparent">
-          MOTOSIM.io 
+        <Bot className="w-6 h-6 sm:w-8 sm:h-8 text-pink-400" />
+        <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 bg-clip-text text-transparent">
+          GOMOTO.io 
         </h1>
       </div>
       <button
