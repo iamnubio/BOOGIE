@@ -25,12 +25,12 @@ export function BottomMenu() {
         </a>
 
         <a
-          href="https://www.datatoleads.com/percentage-calculator"
+          href="https://calendly.com/motosim"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 bg-gradient-to-b from-gray-900 to-teal-950 px-2 py-2 sm:px-4 sm:py-3 rounded-xl text-gray-200 font-medium shadow-lg hover:from-gray-800 hover:to-teal-900 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-1 sm:gap-2"
         >
-          <span className="text-sm sm:text-base">ROI Calculator</span>
+          <span className="text-sm sm:text-base">Book Consultation</span>
         </a>
       </div>
     </div>
