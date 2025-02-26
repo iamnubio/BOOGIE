@@ -9,7 +9,7 @@ export function Support() {
       <div className="space-y-6">
         <div className="bg-gray-900/50 rounded-lg p-4 border border-teal-900/30">
           <h2 className="text-xl font-semibold mb-3 text-teal-300">Contact Support</h2>
-          <p className="text-gray-400">Support system coming soon</p>
+          <p className="text-gray-400">Info@motosim.io</p>
         </div>
         <div className="bg-gray-900/50 rounded-lg p-4 border border-teal-900/30">
           <h2 className="text-xl font-semibold mb-3 text-teal-300">FAQs</h2>

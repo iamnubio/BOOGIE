@@ -5,7 +5,7 @@ import { TopMenu } from './components/TopMenu';
 import { BottomMenu } from './components/BottomMenu';
 import { ChevronRight, MessageSquare } from 'lucide-react';
 import { Dashboard } from './pages/Dashboard';
-import { Projects } from './pages/Projects';
+//import { Projects } from './pages/Projects';
 import { Resources } from './pages/Resources';
 import { Settings } from './pages/Settings';
 import { Support } from './pages/Support';
@@ -45,9 +45,9 @@ function AppContent() {
   const menuItems = [
     { to: '/', label: 'Chat', icon: <MessageSquare className="w-5 h-5" />, primary: true },
     { to: '/dashboard', label: 'Dashboard' },
-    { to: '/projects', label: 'Projects' },
+    //{ to: '/projects', label: 'Projects' },
     { to: '/resources', label: 'Resources' },
-    { to: '/settings', label: 'Settings' },
+    //{ to: '/settings', label: 'Settings' },
     { to: '/support', label: 'Support' }
   ];
 
@@ -66,9 +66,9 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<ChatWindow />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/projects" element={<Projects />} />
+            {/*<Route path="/projects" element={<Projects />} /> */}
             <Route path="/resources" element={<Resources />} />
-            <Route path="/settings" element={<Settings />} />
+            {/*<Route path="/settings" element={<Settings />} /> */}
             <Route path="/support" element={<Support />} />
           </Routes>
         </div>

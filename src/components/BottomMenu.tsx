@@ -16,7 +16,7 @@ export function BottomMenu() {
         </a>
 
         <a
-          href="https://datatoleads.com"
+          href="https://app.avocadata.com/sign-in.php"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-[1.2] bg-gradient-to-b from-teal-900 to-teal-950 px-3 py-3 sm:px-6 sm:py-4 rounded-xl text-white font-semibold shadow-lg hover:from-teal-800 hover:to-teal-900 transition-all transform hover:-translate-y-1 active:translate-y-0 text-sm sm:text-base flex items-center justify-center"
