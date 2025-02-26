@@ -52,7 +52,7 @@ function AppContent() {
   ];
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-b from-gray-950 via-teal-950 to-gray-950 text-gray-100">
+    <div className="flex flex-col h-screen bg-gradient-to-b from-gray-950 via-blue-950 to-gray-950 text-gray-100">
       {/* Top Menu */}
       <div className="bg-gray-950/90 backdrop-blur-md border-b border-teal-900/50">
         <div className="max-w-4xl mx-auto px-3 py-2">
@@ -95,7 +95,7 @@ function AppContent() {
               <NavLink
                 key={item.to}
                 to={item.to}
-                className="flex items-center gap-2 px-4 py-2 bg-teal-900/30 rounded-lg border border-teal-800/50 text-white hover:bg-teal-800/40 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg--900/30 rounded-lg border border-teal-800/50 text-white hover:bg-teal-800/40 transition-colors"
                 icon={item.icon}
               >
                 {item.label}
